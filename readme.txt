@@ -34,3 +34,11 @@ git rm + git commit
 
 git checkout
 其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
+
+远程仓库
+本地Git仓库和GitHub仓库之间的传输是通过SSH加密
+创建SSH Key：
+$ ssh-keygen -t rsa -C "youremail@example.com"
+在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件
+登陆GitHub，打开“Account settings”，“SSH Keys”页面
+点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
